@@ -30,7 +30,6 @@ Includes:
 ## 🔧 Tools Used
 
 - Nmap
-- Wireshark (for packet inspection)
 - Linux (Kali/Debian)
 - Custom Bash aliases
 
