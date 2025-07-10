@@ -14,7 +14,6 @@ created: 2025-07-03T12:13:00
 	* registered ports : `1024 - 49151`
 	* private ports : `49152 - 65535`
 
-
 ## 🟢 SYN Scans 
 ---
 * As with TCP scans , SYN scans `-sS` are used to TCP *port range* of a `target` or `targets`
@@ -28,7 +27,7 @@ created: 2025-07-03T12:13:00
 
 #### the sequence for scanning an open port looks like this
 ---
-![[Pasted image 20250703122814.png]]
+[SYN Scan](SYN-SCAN.png)
 
 * ### ❓why it prevents server from sending request again ?
 	* the reason is `RST` tcp packet .
