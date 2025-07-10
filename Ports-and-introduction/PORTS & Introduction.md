@@ -2,8 +2,7 @@
 created: 2025-06-27T18:29:00
 ---
 ---
-![[ports-eg.png]]
-
+[Ports example](ports-eg.png)
 ##  🚢 PORTS Summarized
 ---
 * Your browser knows what tabs you opened and which contains which *==link==*
