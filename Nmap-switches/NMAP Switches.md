@@ -3,7 +3,7 @@ created: 2025-06-30T02:35:00
 ---
 ----
 
-# Nmap Cheatsheet (TryHackMe Style)
+# Nmap Flags 
 
 ### SYN Scan
 	-sS
