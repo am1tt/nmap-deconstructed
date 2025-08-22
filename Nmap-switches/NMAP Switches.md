@@ -10,9 +10,29 @@ created: 2025-06-30T02:35:00
 	Performs a TCP SYN scan (stealthy and fast). This is often the default 
 	scan type when run as root.
 
+### Connect Scan
+	-sT
+	Performs a full TCP connect scan (slower and more detectable).
+
 ### UDP Scan
 	-sU
 	Scans UDP ports instead of TCP.
+
+### Xmas Scan
+	-sX
+	Sends packets with FIN, PSH, and URG flags set to test firewall/IDS responses.
+
+### FIN Scan
+	-sF
+	Sends packets with only the FIN flag set to try to evade detection.
+
+### Null Scan
+	-sN
+	Sends packets with no flags set to probe how the system responds.
+
+### Ping Scan (No Port Scan)
+	-sn
+	Only pings the host(s) to determine if they are up, no port scanning.
 
 ### OS Detection
 	-O
@@ -22,6 +42,39 @@ created: 2025-06-30T02:35:00
 	-sV
 	Detects service version numbers running on open ports.
 
+### Traceroute
+	--traceroute
+	Performs a traceroute to discover network paths.
+
+### Script Scanning (NSE)
+	-sC
+	Runs a default set of Nmap Scripting Engine (NSE) scripts.
+
+### Run Specific NSE Script
+	--script <script-name>
+	Runs a specific script from the Nmap Scripting Engine.
+
+### Run All "vuln" Scripts
+	--script=vuln
+	Runs all scripts in the "vuln" category to check for common 
+	vulnerabilities.
+
+### Fragment Packets
+	-f
+	Fragments packets into smaller pieces (used to try to evade firewalls/IDS).
+
+### Decoy Scan
+	-D <decoy1,decoy2>
+	Sends scans from spoofed IPs in addition to your real one to hide the true source.
+
+### Spoof Source IP
+	-S <IP>
+	Spoofs the source IP address of your scan traffic.
+
+### Specify Source Port
+	-g <port>
+	Sets the source port number for the scan.
+
 ### Verbose Output
 	-v
 	Increases verbosity level (shows more detailed output).
@@ -30,21 +83,13 @@ created: 2025-06-30T02:35:00
 	-vv
 	Maximum verbosity for more in-depth scan details.
 
-### Output in All Formats
-	-oA <filename>
-	Saves the scan output in 3 formats: normal (.nmap), XML (.xml), and grepable (.gnmap).
-
-### Output in Normal Format
-	-oN <filename>
-	Saves output in standard readable format.
-
-### Output in Grepable Format
-	-oG <filename>
-	Saves output in a format suitable for `grep`.
-
 ### Aggressive Scan
 	-A
 	Performs OS detection, version detection, script scanning, and traceroute.
+
+### Timing Template (0–5)
+	-T<0–5>
+	Sets the scan speed/aggressiveness (0 = paranoid, 5 = insane/fastest).
 
 ### Timing Template Level 5
 	-T5
@@ -62,11 +107,26 @@ created: 2025-06-30T02:35:00
 	-p-
 	Scans all 65535 TCP ports.
 
-### Run Specific NSE Script
-	--script <script-name>
-	Runs a specific script from the Nmap Scripting Engine.
+### Exclude Host(s)
+	--exclude <host>
+	Skips scanning specific host(s).
 
-### Run All "vuln" Scripts
-	--script=vuln
-	Runs all scripts in the "vuln" category to check for common 
-	vulnerabilities.
+### Input from File
+	-iL <filename>
+	Scans all targets listed in the input file.
+
+### Output in All Formats
+	-oA <filename>
+	Saves the scan output in 3 formats: normal (.nmap), XML (.xml), and grepable (.gnmap).
+
+### Output in Normal Format
+	-oN <filename>
+	Saves output in standard readable format.
+
+### Output in Grepable Format
+	-oG <filename>
+	Saves output in a format suitable for `grep`.
+
+### Output in XML Format
+	-oX <filename>
+	Saves output in XML format.
